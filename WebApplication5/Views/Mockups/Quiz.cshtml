@@ -1,0 +1,16 @@
+﻿@model QuizModel
+@{
+    ViewData["Title"] = "Quiz";
+}
+<h1 style="font-size:35px; color:#333333">Quiz</h1>
+
+<div class="CalcMenu">
+    <h2 style="font-size: 20px">@Model.Number1  @Model.Operation @Model.Number2 =</h2>
+    <form method="post">
+        <input name="UserAnswer" type="number" style="width:300px;height:35px" autocomplete="off"> @Html.ValidationMessageFor(p => p.UserAnswer)
+        <br>
+        <input type="submit" value="Next" name="Action" class="btn btn-light mt-3 pr-3 pl-3" style="border-color:lightgrey">
+        <input type="submit" value="Finish" name="Action" class="btn btn-primary mt-3 pr-3 pl-3">
+
+    </form>
+</div>

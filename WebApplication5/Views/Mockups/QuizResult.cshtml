@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Quiz";
+}
+<h1 style="font-size:35px; color:#333333">Quiz results</h1>
+
+<div>
+    <h2>Right Answers @ViewData["Correct"] out @ViewData["Total"]</h2>
+    <ol >
+        
+        @foreach (var p in (ViewBag.Result))
+        {
+            <li> @p</li>
+        }
+        
+    </ol>
+
+</div>
